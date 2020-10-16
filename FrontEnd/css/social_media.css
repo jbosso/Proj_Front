@@ -1,0 +1,56 @@
+/* CCS do FOOTER e das Redes Sociais */
+
+.social-media .social-icons {
+    text-align: center;
+    float: right;
+    padding-right: 2%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .social-media .social-icons {
+      text-align: left;
+    }
+  }
+  
+  .social-media .social-icons a {
+    font-size: 24px;
+    color: #D2D2D2;
+    letter-spacing: 0;
+    text-align: center;
+    margin-right: 24px;
+  }
+  
+  .social-media .social-icons a:last-child {
+    margin-right: 0px;
+  }
+  
+  .social-media .social-icons a:hover {
+    text-decoration: none;
+  }
+
+footer {
+    padding-top: 1%;
+    bottom: 0;
+    min-height: 10vh;
+    background-color: #605751;
+    color: white;
+    position: relative
+}
+
+.footer_style_R{
+    color: white; 
+    font-size:0.9vw; 
+    font-style: normal; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 2%;
+    float: right;
+}
+
+.footer_style_L{
+    color: white; 
+    font-size:0.9vw; 
+    font-style: normal; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2%;
+    float: left;
+}

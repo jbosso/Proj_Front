@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head><link rel="shortcut icon" href="..\imagens\favicon.ico" type="image/x-icon"/></head>
+
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sistema Feriado - Cadastrar</title>
+    <link rel="stylesheet" type="text/css" href="..\css\StyleP_Cadastrar.css">
+    <link rel="stylesheet" type="text/css" href="..\css\social_media.css">
+    <script src="..\js\index.js"></script>
+    <script src="..\js\cadastrar.js"></script>
+
+    <!-- Import -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <style> 
+        body { background-color: #ededed }
+    </style>
+
+</header>
+
+<body onload="carregainfocadastro()">
+<!-- Menu Nav com Imagem e Titulo-->
+<nav class="navbar bg-laranja-itau">
+    <div class="container-fluids">
+        <div class="row col-12">
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4">
+                <a href="index.html"> <img src="..\imagens\logo-itau.png" alt="logo Itau" aria-hidden="true" style="width: 60%; float: right"> </a>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-8" style="position: relative;">
+                <h3 class="titulo"> Padawan - Sistema de Feriados</h3> 
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+        </div>
+    </div>
+</nav>
+<!-- -->
+
+<!-- Foto e Nome -->
+    <div class="container-fluids" id="letra">
+        <div class="row col-12">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-5" style="background-color: white; box-shadow: 3px 3px 3px #f58220;">
+                <div class="column_left">
+                    <div class="column_foto">
+                        <div id="fotoUser" align="right"></div>
+                    </div>
+                    <div class="column_user" align="left">
+                        <div style="padding-top: 5%; text-indent: 0.5em; font-size: 40px;">
+                            <div id="infoUser_Name"></div>
+                            <div id="infoUser_racf" style="color: grey;"></div>
+                            <div id="infoUser_funcional" style="color: grey;"></div>
+                            <div id="infoUser_email" style="color: grey;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-7 container4 letra">
+                <h3 style="font-size: 4.0em; font-style: italic; color: #241F1B; font-family: Arial, Helvetica, sans-serif";>#Cadastro de Novo Feriado</h3>
+            </div>
+
+        </div>
+    </div>
+<!-- -->
+
+<!-- Menu -->
+<div class="container-fluids">
+    <div class="row col-12">
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-5" style="background-color: white; box-shadow: 3px 3px 3px #f58220;">
+            <div class="column_left" style="min-height: 90vh;">
+                <div id="menu">
+                    <ul>
+                        <h4 style="font-style: italic; color: orange;">#Seja Digital</h4>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cadastrar.html">Criar Novo Feriado</a></li>
+                        <li><a href="consultar.html">Consultar Feriado</a></li>
+                        <li><a href=""><div onclick="logout()">Logout</div></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!--  -->
+
+<!-- Formulario de Cadastro -->
+        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-7">
+            
+            <div class="column_100">              
+                <div class="centralizar_form" style="text-indent: 1em;">
+                    <form  style="width: 100%;">
+
+                        <div class="container-fluids column_100"> 
+
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10" style="padding-top: 2%;">
+                                    <div class="form-group">
+                                        <label for="divAgencia" style="font-weight: bold; text-indent: 0em;">Selecione a Agência</label>
+                                        <div id="divAgencia">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col-1"></div>
+                                 <div class="col-6">
+                                    <div class="form-group" align="left" style="padding-left: 0%;">
+                                        <label for="txtNome" style="font-weight: bold; text-indent: 0em;">Nome do Feriado</label>
+                                        <input type="text" required="required" class="input_feriado" id="txtNome" maxlength="50" placeholder="Digite o nome do Feriado" style=" width: 100%;">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="txtDataInicial" style="font-weight: bold; text-indent: 0em;"> Data Inicial</label>
+                                        <input type="date" required="required" class="input_feriado" id="txtDataInicial" style="width: 95%">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="txtDataFim" style="font-weight: bold; text-indent: 0em;">Data Final</label>
+                                        <input type="date" required="required" class="input_feriado" id="txtDataFim" style="width: 95%; margin-right: 4%;">
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12"> <br> </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-1" style="padding-bottom: 0%;"></div>
+                                <div class="col-11">
+                                    <div id="msgERRO" style="color: red; font-style: italic;"></div>
+                                    <button class="button" onclick="cadastrarFeriado()" style="float: left;">Cadastrar Novo Feriado</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div> 
+        </div>
+        
+    </div>
+</div>
+<!-- -->
+
+<!-- Rodape -->
+
+    <footer class="footer navbar-fixed-bottom">
+
+        <div class="container-fluids">
+            <div class="row col-12">
+
+                <table style="width: 100%;">
+
+                    <tr>
+                        <td>
+                            <h3 class="footer_style_L"> © 2020 Itaú Unibanco Holding S.A. CNPJ: 60.872.504/0001-23</h3>
+                        </td>
+                        <td>
+                            <h3 class="footer_style_R"> Banco Itaú | Tudo pra você </h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3 class="footer_style_L" style="font-size:0.5vw; "> Praça Alfredo Egydio de Souza Aranha, 100,
+                                Torre Olavo Setubal, Parque Jabaquara - CEP 04344-902 - São Paulo - Brasil </h3>
+                        </td>
+                        <td>
+                            <div class="social-media">
+                                <div class="social-icons">
+                                    <a href="https://www.instagram.com/itau" target="_blank" role="button"
+                                        aria-label="Instagram" rel="nofollow"><img src="..\imagens\ic1.png"></a>
+                                    <a href="https://www.youtube.com/itau" target="_blank" role="button"
+                                        aria-label="Youtube" rel="nofollow"><img src="..\imagens\ic2.png"></a>
+                                    <a href="https://www.facebook.com/itau" target="_blank" role="button"
+                                        aria-label="Facebook" rel="nofollow"><img src="..\imagens\ic3.png"></a>
+                                    <a href="https://twitter.com/itau" target="_blank" role="button" aria-label="Twitter"
+                                        rel="nofollow"><img src="..\imagens\ic4.png"></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </footer>
+<!-- -->
+
+
+
+<!-- Import -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

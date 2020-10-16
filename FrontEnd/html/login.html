@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head><link rel="shortcut icon" href="..\imagens\favicon.ico" type="image/x-icon"/></head>
+
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sistema Feriado - Login</title>
+    <link rel="stylesheet" type="text/css" href="..\css\StyleP_Login.css">
+    <script src="..\js\login.js"></script>
+
+    <!-- Import -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <style> 
+        body { background-color: #ededed }
+    </style>
+
+</header>
+
+<body>
+<!-- Menu Nav com Imagem e Titulo-->
+    <nav class="navbar bg-laranja-itau">
+        <div class="container-fluids">
+            <div class="row" >
+                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4">
+                    <a href="login.html"> <img src="..\imagens\logo-itau.png" alt="logo Itau" aria-hidden="true" style="width: 60%; float: right"> </a>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-8" style="position: relative;">
+                    <h3 class="titulo"> Padawan - Sistema de Feriados</h3> 
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-0 col-0"></div>
+            </div>
+        </div>
+    </nav>
+<!-- -->
+
+<!-- Login -->
+    <div class="container-flex centralizar">
+
+            <form method="post" action="" class="loginForm">
+                <h1>Bem Vindo@</h1>
+                <p>
+                    <label for="txtUser">Usuario: </label>
+                    <input id="txtUser" name="txtUser" required="required" type="text" placeholder="Digite sua funcional ou Racf" onKeyPress="return submitenter(this,event)"/>
+                </p>
+                <p>
+                    <label for="txtSenha">Senha: </label>
+                    <input id="txtSenha" name="txtSenha" required="required" type="password" placeholder="Digite sua senha" onKeyPress="return submitenter(this,event)" />
+                </p>
+                <p>
+                    <input type="checkbox" name="session" id="session" value="" />
+                    <label for="session" class="label2">Manter-me logado</label>
+                </p>
+                <p>
+                    <button type="button" class="button"  style="width: 100%; border: #f58220;" onclick="autenticar()">Logar</button>
+                </p>
+            </form>
+
+    </div>
+
+    <div class="container-flex centralizar">
+        <div class="row">
+            <div class="col-12" id="msgERRO" style="color: #ededed;"></div>
+        </div>
+    </div>
+<!-- -->
+
+<!-- Import -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
